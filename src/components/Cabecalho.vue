@@ -12,12 +12,10 @@ const emit = defineEmits(['update:num1', 'update:num2', 'update:operation']);
     <input class="ms-4" type="number" :value="num2" @input="emit('update:num2', +$event.target.value)" placeholder="Número 2">
     <select class="ms-4 bg-primary" :value="operation" @change="emit('update:operation', $event.target.value)">
     
-    <div class="list-group">
-        <option value="add">+</option>
+    <option value="add">+</option>
     <option value="subtract">-</option>
     <option value="multiply">*</option>
     <option value="divide">/</option>
-    </div>
     </select>
   </header>
 </template>
